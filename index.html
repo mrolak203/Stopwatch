@@ -1,15 +1,29 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
-  
-  <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
-  <script language="javascript" type="text/javascript" src="timer.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
 
-<body>
+        <h1 class ="timer">Stopwatch Timer</h1>
 
-  <p id="timer">______</p>
+        <a class="btn start" onclick="startTimer()">Start</a>
+         <a class="btn" onclick="pauseTimer()">Pause</a>
+          <a class="btn" onclick="stopTimer()">Stop</a>
 
-</body>
+
+    
+          <a class="btn" onclick="saveTime()">Save</a>
+        <a class="btn" href="/history.html">Stopwatch History</a>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="timer.js"></script>
+  </body>
 </html>
