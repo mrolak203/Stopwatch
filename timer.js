@@ -80,12 +80,11 @@ function saveTime(){
 
 	var de = new Date().toISOString();
 	
-	var d = "created on: "+de.slice(0,10) + "at " + de.slice(11,19);
+	var d = de.slice(0,10)+" ";
 	
 
 	saveNewTime  = (e) => {
 
-		console.log("ssaving noew time");
 
 		e.preventDefault();
 
