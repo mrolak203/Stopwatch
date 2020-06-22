@@ -63,11 +63,44 @@ function pauseTimer(){
 	stopwatch history
 */
 
+var finalscore = 0;
+
 function saveTime(){
 
 	if(running){
 		stopTimer();
 	}
+
+	finalscore = document.getElementById("time").innerHTML;
+
+	
+
+
+	const history = JSON.parse(localStorage.getItem('history')) || [];
+
+	var de = new Date().toISOString();
+	
+	var d = "created on: "+de.slice(0,10) + "at " + de.slice(11,19);
+	
+
+	saveNewTime  = (e) => {
+
+		console.log("ssaving noew time");
+
+		e.preventDefault();
+
+		
+		const value = {
+			time: finalscore,
+			date: d,
+		};
+
+		history.push(value);
+
+		localStorage.setItem('history', JSON.stringify(history));
+	};
+
+ saveNewTime(event);
 }
 
 /*
