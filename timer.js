@@ -10,6 +10,9 @@ var savedTime;
 var paused = 0;
 var running = 0;
 
+/*
+	This function launches the timer for the first time
+*/
 function startTimer(){
   if(!running){
     startTime = new Date().getTime();
@@ -20,6 +23,9 @@ function startTimer(){
   }
 }
 
+/*
+	This function stops the timer and resets all values
+*/
 function stopTimer(){
 
 		clearInterval(tInterval);
@@ -52,12 +58,18 @@ function pauseTimer(){
 
 }
 
+/*
+	This function saves the stopwatch time onto local storage, along with the current date into 
+	stopwatch history
+*/
+
 function saveTime(){
 
 	if(running){
 		stopTimer();
 	}
 }
+
 /*
 	this function works by checking for the current time
 	and subtracting that from the total amount of time since the timer started.
